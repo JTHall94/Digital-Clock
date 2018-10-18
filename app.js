@@ -57,6 +57,10 @@ let app = new Vue({
               alarm.style.display= 'block';
               this.alarmstate='on'
 
+              display.style.border = '1px solid red';
+
+
+
           } else {
             alarm.style.display= 'none';
           }
@@ -73,6 +77,7 @@ let app = new Vue({
           this.alarmstate='off';
           alarm.style.display='none';
           setalert.style.display='none';
+          display.style.border='none';
 
 
         },
