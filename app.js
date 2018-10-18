@@ -63,7 +63,7 @@ let app = new Vue({
         }
 
          if (this.alarmstate=="on") {
-           alarm.style.displa= 'block';
+           alarm.style.display= 'block';
          }
 
 
@@ -72,12 +72,13 @@ let app = new Vue({
         alarmOff: function () {
           this.alarmstate='off';
           alarm.style.display='none';
-          console.log('this is working');
+          setalert.style.display='none';
+
 
         },
 
         setAlarm: function () {
-          return this.alarmstuff;
+          setalert.style.display='block';
 
         }
 

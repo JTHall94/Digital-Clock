@@ -1,7 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
 [v-cloak] {
+  display: none;
+}
+
+#display {
+  justify-content: center;
+  border: 1px red solid;
+  max-width: 400px;
+  margin: auto;
+}
+
+#clockheader {
+  font:
+}
+#clock {
+  font-family: 'Orbitron', sans-serif;
+  color: #f05d5d;
+}
+
+#setalert {
   display: none;
 }
 
 #alarm {
   display: none;
+}
+
+#inputtime {
+  max-width: 80px;
 }

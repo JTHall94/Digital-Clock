@@ -17,14 +17,21 @@
 
     <div id="app" class="pt-5" v-cloak>
 
-
-      <p>The current time is:</p>
-      <h2 class="text-info" id="clock">{{ clockstuff }}</h2>
-
-      <div id="input">
-        <input v-model="alarmstuff" v-on:key.enter="setAlarm"></input>
+      <div id="display">
+      <p id="clockheader" class="text-light">The current time is:</p>
+      <h1 id="clock" class="mb-4">{{ clockstuff }}</h2>
       </div>
-      <div id="alarm">
+
+
+      <div id="input" class="form-group">
+        <label for="inputtime" class="text-light">Input your alarm and hit enter to set it.</label><br>
+        <input v-model="alarmstuff" v-on:keyup.enter="setAlarm" id="inputtime" placeholder="hh/mm/ss"></input>
+      </div>
+
+      <div id="setalert">
+        <p class="text-light">Set!</p>
+      </div>
+      <div id="alarm" class="mt-4">
         <h2 class="text-danger">ALARM!</h2>
         <button v-on:click="alarmOff" type="button">Okay!</button>
       </div>
