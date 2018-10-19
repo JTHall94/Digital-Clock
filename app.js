@@ -78,6 +78,7 @@ let app = new Vue({
           alarm.style.display='none';
           setalert.style.display='none';
           display.style.border='none';
+          inputtime.value='';
 
 
         },
@@ -85,14 +86,39 @@ let app = new Vue({
         setAlarm: function () {
           setalert.style.display='block';
 
+        },
+
+        snooze: function () {
+          this.alarmstate='off';
+          alarm.style.display='none';
+          setalert.style.display='block';
+          display.style.border='none';
+
+              let now = new Date();
+
+              let hours = now.getHours();
+              if (hours < 10) {
+                  hours = '0' + hours;
+              }
+
+              let minutes = now.getMinutes();
+              if (minutes < 10) {
+                  minutes = '0' + minutes;
+              }
+
+              let seconds = now.getSeconds();
+              if (seconds < 10) {
+                  seconds = '0' + seconds;
+              }
+
+              this.alarmstuff= hours + ':' + (minutes+2) + ':' + seconds;
+
+
+          }
+
         }
 
 
 
 
-    }
-
-
-
-
-});
+    });
